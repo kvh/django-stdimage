@@ -14,7 +14,7 @@ class DelAdminFileWidget(AdminFileWidget):
         if value:
             return mark_safe(render_to_string('stdimage/admin_widget.html', {
                 'name': name, 'value': value, 'input': input,
-                'show_delete_button': value.field.blank,
+                'show_delete_button': True,
                 'MEDIA_URL': settings.MEDIA_URL,
             }))
         else:
